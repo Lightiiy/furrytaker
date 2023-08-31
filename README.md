@@ -22,6 +22,7 @@ NO CHANGES ARE DONE DIRECTLY TO THIS BRANCH OR I WILL BE ANGY >:(
 Tools:
 - Unity Hub & Editor
 - Figma (??)
+- Photshop
 - SmackStudio for character animation (??)
 
 Resources:
