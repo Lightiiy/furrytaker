@@ -1,5 +1,5 @@
 # furrytaker
-Unity personal projects of two delulu people
+Unity personal projects of two delulu people. From Idiots for Idiots 🥰
 
 # Google Docs
 always might be useful
