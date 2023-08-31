@@ -26,6 +26,7 @@ Tools:
 - Unity Hub & Editor
 - Figma (??)
 - Photshop
+- Pixel Edit
 - SmackStudio for character animation (??)
 
 Resources:
