@@ -8,6 +8,7 @@ https://docs.google.com/document/d/1qJOkw6aV216yYxvt9tOse-BwHKwEW4IiKgRoa2XiEMM/
 ## Figma link
 used for basic concept desgin of UI/UX 
 and also as a whtiteboard of ideas? 
+https://www.figma.com/file/nBTOTxyWsijNsGwK9K0LTz/WhiteBoard---game?type=whiteboard&node-id=0%3A1&t=5Ml2IuBNiHBFE3VN-1
 https://www.figma.com/file/ZVBefynTR8axEE798uBhNe/Untitled?type=design&node-id=0%3A1&mode=design&t=kwIP7FR2QHXIgmCS-1
 
 ## Git WorkFlow
