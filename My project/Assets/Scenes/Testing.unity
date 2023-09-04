@@ -191,6 +191,37 @@ Transform:
   - {fileID: 1142169511}
   m_Father: {fileID: 458495711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &397720333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397720334}
+  m_Layer: 0
+  m_Name: PlayerGroundPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397720334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397720333}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1222872761}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458495710
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +743,7 @@ GameObject:
   - component: {fileID: 1222872759}
   - component: {fileID: 1222872762}
   - component: {fileID: 1222872763}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,10 +838,11 @@ Transform:
   m_GameObject: {fileID: 1222872758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.52, y: -1.41, z: 0}
+  m_LocalPosition: {x: 0, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 397720334}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1222872762
@@ -864,6 +896,10 @@ MonoBehaviour:
   jumpForce: 20
   playerRigidbody: {fileID: 1222872759}
   jumpFlag: 1
+  groundCheckPoint: {fileID: 397720334}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
   keyCount: 0
 --- !u!1 &1575986987
 GameObject:
