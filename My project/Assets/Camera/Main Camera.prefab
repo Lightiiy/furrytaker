@@ -151,3 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraFocusTarget: {fileID: 0}
+  farBackground: {fileID: 0}
+  middleBackground: {fileID: 0}
+  minHeight: 0
+  maxHeight: 25

@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
     //basics for physics
     public float playerSpeed = 10;
     public float jumpForce = 20;
     public Rigidbody2D playerRigidbody;
-        //jump restriction
+
     public bool jumpFlag = true;
     public Transform groundCheckPoint;
     public LayerMask groundLayer;
@@ -17,8 +18,14 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnimator;
     private SpriteRenderer playerSpriteRenderer;
     
-    //advanced
-    public int keyCount;
+    public float knockBackLength, knockBackForce, impactLength;
+    private float knockBackCounter, impactCounter;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +36,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (knockBackCounter >= 0 || impactCounter >= 0)
+        {
+            knockBackCounter -= Time.deltaTime;
+            impactCounter -= Time.deltaTime;
+            return;
+        }
         Vector2 velocity = BasePlayerMovement();
 
         //calculate velocity and at the end append the value to velocity
@@ -68,5 +81,17 @@ public class PlayerController : MonoBehaviour
             return playerSpriteRenderer.flipX;
         }
         return playerSpriteRenderer.flipX = playerRigidbody.velocity.x < -0.1;
+    }
+
+    public void KnockBack()
+    {
+        knockBackCounter = knockBackLength;
+        impactCounter = impactLength;
+        float flingOppositeToHazard = playerSpriteRenderer.flipX ? knockBackForce : -knockBackForce;
+        
+        playerRigidbody.velocity = new Vector2(flingOppositeToHazard, knockBackForce);
+        playerAnimator.SetTrigger("PlayerHurt");
+
+
     }
 }
