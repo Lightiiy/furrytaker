@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ public class UIController : MonoBehaviour
 
     public Sprite heartFull, heartEmpty;
 
+    public GameObject GemCounter;
+    
     private void Awake()
     {
         Instance = this;
@@ -53,5 +56,10 @@ public class UIController : MonoBehaviour
                 heart3.sprite = heartEmpty;
                 break;
         }
+    }
+
+    public void UpdateGemCounter()
+    {
+        GemCounter.GetComponentInChildren<TMP_Text>().text = LevelManager.Instance.PlayerScore.ToString();
     }
 }

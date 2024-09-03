@@ -389,6 +389,8 @@
 "Assets/Camera/UI/UIController.cs"
 "Assets/Player/Scripts/PlayerController.cs"
 "Assets/Player/Scripts/PlayerHealthController.cs"
+"Assets/TileSet/CheckPoint/CheckpointController.cs"
+"Assets/TileSet/CheckPoint/CheckpointEntityController.cs"
 "Assets/TileSet/Hazards/DamageOnCollisionEvent.cs"
 -langversion:9.0
 

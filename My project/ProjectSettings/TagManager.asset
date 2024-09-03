@@ -8,13 +8,13 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - Ground
+  - Effects
+  - Pickups
+  - Enemies
   - Player
-  - 
-  - 
   - 
   - 
   - 
@@ -41,11 +41,20 @@ TagManager:
   - name: Background
     uniqueID: 507882453
     locked: 0
+  - name: World
+    uniqueID: 4245831723
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: World
-    uniqueID: 4245831723
+  - name: Effects
+    uniqueID: 2527795021
+    locked: 0
+  - name: Pickups
+    uniqueID: 214179075
+    locked: 0
+  - name: Enemies
+    uniqueID: 619583609
     locked: 0
   - name: Player
     uniqueID: 3311594091
