@@ -109,7 +109,6 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
--define:UNITY_PRO_LICENSE
 -define:ENABLE_CUSTOM_RENDER_TEXTURE
 -define:ENABLE_DIRECTOR
 -define:ENABLE_LOCALIZATION
@@ -385,17 +384,18 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -analyzer:"F:/UnityEditor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"F:/UnityEditor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/Camera/CameraControl.cs"
-"Assets/Camera/UI/UIController.cs"
-"Assets/Player/Scripts/PlayerController.cs"
-"Assets/Player/Scripts/PlayerHealthController.cs"
-"Assets/SharedScripts/DestroyAfterTimePeriod.cs"
-"Assets/TileSet/CheckPoint/CheckpointController.cs"
-"Assets/TileSet/CheckPoint/CheckpointEntityController.cs"
-"Assets/TileSet/Collectibles/CollectibleController.cs"
-"Assets/TileSet/Hazards/DamageOnCollisionEvent.cs"
-"Assets/TileSet/Hazards/KillPlaneController.cs"
-"Assets/TileSet/LevelManager.cs"
+"Assets/Game Components/Camera/CameraControl.cs"
+"Assets/Game Components/Camera/UI/UIController.cs"
+"Assets/Game Components/Player/Scripts/PlayerController.cs"
+"Assets/Game Components/Player/Scripts/PlayerHealthController.cs"
+"Assets/Game Components/SharedScripts/DestroyAfterTimePeriod.cs"
+"Assets/Game Components/TileSet/CheckPoint/CheckpointController.cs"
+"Assets/Game Components/TileSet/CheckPoint/CheckpointEntityController.cs"
+"Assets/Game Components/TileSet/Collectibles/CollectibleController.cs"
+"Assets/Game Components/TileSet/Hazards/DamageOnCollisionEvent.cs"
+"Assets/Game Components/TileSet/Hazards/Enemies/Frog/FrogBehaviour.cs"
+"Assets/Game Components/TileSet/Hazards/KillPlaneController.cs"
+"Assets/Game Components/TileSet/LevelManager.cs"
 -langversion:9.0
 
 /deterministic
