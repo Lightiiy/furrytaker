@@ -1,5 +1,4 @@
 # furrytaker
-Unity personal projects of two delulu people. From Idiots for Idiots 🥰
 
 # Google Docs
 always might be useful
@@ -16,10 +15,16 @@ https://www.figma.com/file/ZVBefynTR8axEE798uBhNe/Untitled?type=design&node-id=0
 ## Git WorkFlow
 I'm suggesting a basic gitworkflow with
 - ONE main branch -> branch with current latests changes that everyone agrees are "finished".
-NO CHANGES ARE DONE DIRECTLY TO THIS BRANCH OR I WILL BE ANGY >:(
 - MANY feature branches -> branches made for implementation of specific feautres. Any new feature needs to be created via seperate branch.
-  Doing so should idiot proof us from adding changes that break the whole project/marking feature we added caused the break
 - MANY bug branches -> branches for fixing stuff from new features. Similar to feature branches
+
+## TO-DO
+#Features
+- Major
+Improve timing between movement and Ray Casts
+Improve relation between movement and Ray Casts 
+- Minor
+Add random time intervals for frog movement, and random movement distance.
 
 
 Tools:
