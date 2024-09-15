@@ -386,6 +386,7 @@
 -analyzer:"F:/UnityEditor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Game Components/Camera/CameraControl.cs"
 "Assets/Game Components/Camera/UI/UIController.cs"
+"Assets/Game Components/Player/Scripts/DamgeHitBoxController.cs"
 "Assets/Game Components/Player/Scripts/PlayerController.cs"
 "Assets/Game Components/Player/Scripts/PlayerHealthController.cs"
 "Assets/Game Components/SharedScripts/DestroyAfterTimePeriod.cs"

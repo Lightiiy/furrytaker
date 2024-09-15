@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     //basics for physics
     public float playerSpeed = 10;
     public float jumpForce = 20;
+    public float reboundForceStrength = 20;
     public Rigidbody2D playerRigidbody;
 
     public bool jumpFlag = true;
@@ -93,5 +94,10 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetTrigger("PlayerHurt");
 
 
+    }
+
+    public void reboundForce(Vector2 direction)
+    {
+        playerRigidbody.velocity = new Vector2(direction.x * reboundForceStrength, direction.y * reboundForceStrength);
     }
 }
