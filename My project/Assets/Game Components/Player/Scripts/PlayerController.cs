@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 20;
     public float reboundForceStrength = 20;
     public Rigidbody2D playerRigidbody;
-
+    public GameObject playerDamageTrigger;
+    
     public bool jumpFlag = true;
     public Transform groundCheckPoint;
     public LayerMask groundLayer;
@@ -37,13 +38,17 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //create a coroutine for knockback
         if (knockBackCounter >= 0 || impactCounter >= 0)
         {
+            playerDamageTrigger.SetActive(false);
             knockBackCounter -= Time.deltaTime;
             impactCounter -= Time.deltaTime;
             return;
         }
         Vector2 velocity = BasePlayerMovement();
+        playerDamageTrigger.SetActive(true);
+
 
         //calculate velocity and at the end append the value to velocity
         playerRigidbody.velocity = velocity;

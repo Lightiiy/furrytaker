@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemies
+  - Collectibles
+  - DamageTrigger
   layers:
   - Default
   - TransparentFX
@@ -16,7 +18,7 @@ TagManager:
   - Pickups
   - Enemies
   - Player
-  - 
+  - DamageTrigger
   - 
   - 
   - 

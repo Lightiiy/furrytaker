@@ -12,12 +12,15 @@ public class FrogBehaviour : MonoBehaviour
     public float frogCheckPathTime;
     public float checkDistance;
     public LayerMask groundLayer;
-    // public GameObject triggerBoxCollider;
+    public GameObject triggerBoxCollider;
     public GameObject physicsBoxCollider;
     public GameObject spriteRenderer;
     public Transform groundCheckPoint;
+    [Range(0f, 100f)]public float chanceForLoot;
+    public GameObject droppedLoot;
 
     private BoxCollider2D frogBoxCollider2D;
+    private BoxCollider2D frogTriggerBox2D;
     private RaycastHit2D verticalRaycast, horizontalRaycast;
     private SpriteRenderer frogSpriteRenderer;
     private Animator frogAnimator;
@@ -32,6 +35,7 @@ public class FrogBehaviour : MonoBehaviour
     void Start()
     {
         frogBoxCollider2D = physicsBoxCollider.GetComponent<BoxCollider2D>();
+        frogTriggerBox2D = triggerBoxCollider.GetComponent<BoxCollider2D>();
         frogSpriteRenderer = spriteRenderer.GetComponent<SpriteRenderer>();
         frogRigidbody2D = GetComponent<Rigidbody2D>();
         frogAnimator = GetComponent<Animator>();
@@ -42,8 +46,16 @@ public class FrogBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, groundLayer);
         timerRayCasts += Time.deltaTime;
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, groundLayer);
+        if (frogSpriteRenderer.flipX)
+        {
+            frogTriggerBox2D.offset = new Vector2(0.1f, frogTriggerBox2D.offset.y);
+        }
+        else
+        {
+            frogTriggerBox2D.offset = new Vector2(0f, frogTriggerBox2D.offset.y);
+        }
         if (timerRayCasts >= frogCheckPathTime)
         {
             StartCoroutine(checkForWallsAndFloorGaps());
@@ -110,5 +122,18 @@ public class FrogBehaviour : MonoBehaviour
         
         frogAnimator.SetFloat("frogVerticalSpeed", frogRigidbody2D.velocity.y);
         frogAnimator.SetBool("isGrounded", isGrounded);
+    }
+
+    private void OnDisable()
+    {
+        triggerBoxCollider.SetActive(false);
+        if (chanceForLoot >= Random.Range(0f, 100f))
+        {
+            Instantiate(droppedLoot, transform.position, transform.rotation);
+        }
+        else
+        {
+            Debug.Log("uh oh unlucky");
+        }
     }
 }

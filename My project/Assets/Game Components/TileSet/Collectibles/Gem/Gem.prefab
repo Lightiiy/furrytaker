@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 568608305781478020}
   m_Layer: 7
   m_Name: Gem
-  m_TagString: Untagged
+  m_TagString: Collectibles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

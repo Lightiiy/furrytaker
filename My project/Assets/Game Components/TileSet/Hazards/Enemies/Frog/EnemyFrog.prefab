@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8776009019886641316}
   - component: {fileID: 7275961425339614098}
-  m_Layer: 8
+  - component: {fileID: 8136840910999132421}
+  m_Layer: 10
   m_Name: frogTriggerCollider
   m_TagString: Enemies
   m_Icon: {fileID: 0}
@@ -41,7 +42,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 722679471273251429}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: cf5e3c1270990e34bafb715c11a3ae2f, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -77,6 +78,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8136840910999132421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722679471273251429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584365387c970d0468809b5efac417f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1469630289698103323
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,9 +147,12 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  triggerBoxCollider: {fileID: 722679471273251429}
   physicsBoxCollider: {fileID: 7724806333731221088}
   spriteRenderer: {fileID: 7113386012691705879}
   groundCheckPoint: {fileID: 3379692258885386142}
+  chanceForLoot: 50
+  droppedLoot: {fileID: 6290162124718334594, guid: 076f9e565aa22f84f85f309bc50e3782, type: 3}
 --- !u!95 &508446595872401790
 Animator:
   serializedVersion: 5
@@ -291,7 +307,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -1173278175954788244, guid: cdb41fcfe2e6cda4ea4fbc86225c9168, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2.125, y: 2}
@@ -364,7 +380,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.035774708}
+  m_Offset: {x: 0.0059604645, y: -0.11913037}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -375,5 +391,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9284506}
+  m_Size: {x: 1.622654, y: 1.06951}
   m_EdgeRadius: 0

@@ -154,4 +154,4 @@ MonoBehaviour:
   farBackground: {fileID: 0}
   middleBackground: {fileID: 0}
   minHeight: 0
-  maxHeight: 25
+  maxHeight: 100

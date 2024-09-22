@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5919671322667386629}
   - component: {fileID: 6018035358353333569}
   - component: {fileID: 6992492890347593783}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: DamageHitBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 1896236381957933565}
   - component: {fileID: 2529159422574208782}
   - component: {fileID: 4641525216215753772}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -241,8 +241,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.038039684, y: -0.35865915}
-  m_Size: {x: 1.0327072, y: 1.3261554}
+  m_Offset: {x: -0.038039684, y: -0.31761146}
+  m_Size: {x: 1.0327072, y: 1.24406}
   m_Direction: 0
 --- !u!114 &1896236381957933565
 MonoBehaviour:
@@ -260,6 +260,7 @@ MonoBehaviour:
   jumpForce: 20
   reboundForceStrength: 20
   playerRigidbody: {fileID: 359602874236054156}
+  playerDamageTrigger: {fileID: 293355731005967132}
   jumpFlag: 1
   groundCheckPoint: {fileID: 5819755574800566173}
   groundLayer:
@@ -302,7 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 0
-  maxHealth: 1
+  maxHealth: 3
   invinciblePeriod: 2
   DeathEffect: {fileID: 5447640640913590992, guid: e5e0f730b14bc2243beca4bec71844a7, type: 3}
 --- !u!1 &6833500931195820898
@@ -314,9 +315,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5819755574800566173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerGroundPoint
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
