@@ -126,7 +126,7 @@ public class FrogBehaviour : MonoBehaviour
 
     private void OnDisable()
     {
-        triggerBoxCollider.SetActive(false);
+        AudioManager.Instance.PlaySFX(3);
         if (chanceForLoot >= Random.Range(0f, 100f))
         {
             Instantiate(droppedLoot, transform.position, transform.rotation);

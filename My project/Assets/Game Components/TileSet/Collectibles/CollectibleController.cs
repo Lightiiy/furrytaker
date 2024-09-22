@@ -48,6 +48,7 @@ public class CollectibleController : MonoBehaviour
             case CollectibleTypes.Gem:
                 LevelManager.Instance.PlayerScore++;
                 UIController.Instance.UpdateGemCounter();
+                AudioManager.Instance.PlaySFX(6);
                 break;
             case CollectibleTypes.Health:
                 if (PlayerHealthController.Instance.currentHealth >= PlayerHealthController.Instance.maxHealth)
@@ -56,6 +57,8 @@ public class CollectibleController : MonoBehaviour
                 }
                 PlayerHealthController.Instance.currentHealth++;
                 UIController.Instance.UpdateHealthDisplay();
+                AudioManager.Instance.PlaySFX(7);
+
                 break;
 
         }

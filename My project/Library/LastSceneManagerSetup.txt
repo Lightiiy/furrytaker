@@ -1,4 +1,8 @@
 sceneSetups:
+- path: Assets/Game Components/Scenes/MainMenu.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
 - path: Assets/Game Components/Scenes/TileSetTutorial.unity
   isLoaded: 1
   isActive: 1

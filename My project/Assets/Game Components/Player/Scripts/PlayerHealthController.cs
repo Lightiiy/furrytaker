@@ -59,5 +59,6 @@ public class PlayerHealthController : MonoBehaviour
             PlayerController.Instance.KnockBack();
         }
         UIController.Instance.UpdateHealthDisplay();
+        AudioManager.Instance.PlaySFX(9);
     }
 }

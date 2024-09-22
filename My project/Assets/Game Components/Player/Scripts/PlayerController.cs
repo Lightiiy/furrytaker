@@ -38,6 +38,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (UIController.Instance.isPaused)
+        {
+            return;
+        }
         //create a coroutine for knockback
         if (knockBackCounter >= 0 || impactCounter >= 0)
         {
@@ -72,6 +76,7 @@ public class PlayerController : MonoBehaviour
             //no double jumps? I could add a hardcoded jump check by multiplying jumpForce by jumpCheck here.
             movementVector.y = jumpForce;
             jumpFlag = false;
+            AudioManager.Instance.PlaySFX(10);
         }
         //user presses left/right -> move player left/right
         movementVector.x = Input.GetAxisRaw("Horizontal") * playerSpeed;
