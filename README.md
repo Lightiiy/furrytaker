@@ -27,6 +27,7 @@ Improve relation between movement and Ray Casts
 Add random time intervals for frog movement, and random movement distance.
 Collectibles are invurnable for a short period of time after dropping from an enemy
 Collectibles jump up and bounce a bit after dropping from enemy
+Collectibles that can be picked up in quick succession have raising pitch with each instance picked up
 Colliders don't respect the sprite animation for some cases (flipX = true) -> Two seperate colliders, one always disabled depending on the flipX flag state
 
 
