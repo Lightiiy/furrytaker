@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -15,7 +16,7 @@ public class PlayerController : MonoBehaviour
     
     public bool jumpFlag = true;
     public Transform groundCheckPoint;
-    public LayerMask groundLayer;
+    public LayerMask[] groundLayers;
 
     private Animator playerAnimator;
     private SpriteRenderer playerSpriteRenderer;
@@ -68,7 +69,14 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 movementVector = playerRigidbody.velocity;
 
-        jumpFlag = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, groundLayer);
+        LayerMask layersOfGroundBehaviour = 0;
+
+        foreach (LayerMask layer in groundLayers)
+        {
+            layersOfGroundBehaviour |= layer;
+        }
+         
+        jumpFlag = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, layersOfGroundBehaviour);
 
         //user presses jump -> move player up
         if(Input.GetButtonDown("Jump") && jumpFlag)
@@ -104,6 +112,22 @@ public class PlayerController : MonoBehaviour
         playerAnimator.SetTrigger("PlayerHurt");
 
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            transform.parent = other.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            transform.parent = null;
+        }
     }
 
     public void reboundForce(Vector2 direction)

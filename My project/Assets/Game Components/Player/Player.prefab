@@ -103,8 +103,8 @@ GameObject:
   - component: {fileID: 8181513856635778799}
   - component: {fileID: 359602874236054156}
   - component: {fileID: 1026595278427417745}
-  - component: {fileID: 1896236381957933565}
   - component: {fileID: 2529159422574208782}
+  - component: {fileID: 1896236381957933565}
   - component: {fileID: 4641525216215753772}
   m_Layer: 9
   m_Name: Player
@@ -244,31 +244,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.038039684, y: -0.31761146}
   m_Size: {x: 1.0327072, y: 1.24406}
   m_Direction: 0
---- !u!114 &1896236381957933565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5703987408725281780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b100611fd4c73469a2b70b5ff540e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 10
-  jumpForce: 20
-  reboundForceStrength: 20
-  playerRigidbody: {fileID: 359602874236054156}
-  playerDamageTrigger: {fileID: 293355731005967132}
-  jumpFlag: 1
-  groundCheckPoint: {fileID: 5819755574800566173}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  knockBackLength: 1
-  knockBackForce: 5
-  impactLength: 1
 --- !u!95 &2529159422574208782
 Animator:
   serializedVersion: 5
@@ -290,6 +265,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1896236381957933565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5703987408725281780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6b100611fd4c73469a2b70b5ff540e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 10
+  jumpForce: 20
+  reboundForceStrength: 20
+  playerRigidbody: {fileID: 359602874236054156}
+  playerDamageTrigger: {fileID: 293355731005967132}
+  jumpFlag: 1
+  groundCheckPoint: {fileID: 5819755574800566173}
+  groundLayers:
+  - serializedVersion: 2
+    m_Bits: 8
+  - serializedVersion: 2
+    m_Bits: 2048
+  knockBackLength: 1
+  knockBackForce: 5
+  impactLength: 1
 --- !u!114 &4641525216215753772
 MonoBehaviour:
   m_ObjectHideFlags: 0

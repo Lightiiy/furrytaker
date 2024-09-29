@@ -43,4 +43,17 @@ public class LevelManager : MonoBehaviour
         PlayerHealthController.Instance.currentHealth = PlayerHealthController.Instance.maxHealth;
         UIController.Instance.UpdateHealthDisplay();
     }
+
+
+    public void LevelEnd()
+    {
+        Debug.Log("im ending");
+    }
+
+    private IEnumerator EndLevelCoroutyine()
+    {
+        yield return new WaitForSeconds((1.5f));
+        
+        
+    }
 }
