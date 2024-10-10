@@ -1,5 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1479269705278702934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2528250686802431155}
+  - component: {fileID: 1587519667957460952}
+  m_Layer: 8
+  m_Name: eagleTriggerCollider
+  m_TagString: Enemies
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2528250686802431155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479269705278702934}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7385770710671732184}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1587519667957460952
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479269705278702934}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &3163537259209056110
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,9 +77,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1133521700110685427}
   - component: {fileID: 1917888846662646956}
-  m_Layer: 8
-  m_Name: eagleTriggerCollider
-  m_TagString: Untagged
+  - component: {fileID: 2989862972320947436}
+  m_Layer: 10
+  m_Name: eagleDamageHitBox
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,6 +135,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2989862972320947436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3163537259209056110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584365387c970d0468809b5efac417f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5335958682789539584
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,9 +156,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7385770710671732184}
+  - component: {fileID: 3340879180278382926}
   - component: {fileID: 6539631177747029844}
   - component: {fileID: 7718396444146516231}
-  - component: {fileID: 3340879180278382926}
   m_Layer: 8
   m_Name: EnemyEagle
   m_TagString: Enemies
@@ -102,8 +182,27 @@ Transform:
   - {fileID: 4497073641779981504}
   - {fileID: 1133521700110685427}
   - {fileID: 5947029762388670766}
+  - {fileID: 2528250686802431155}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3340879180278382926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5335958682789539584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730a376527f78584ebd0b938af63b1ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eagleTriggerCollider: {fileID: 3163537259209056110}
+  eagleAttackRange: {fileID: 8642767895867124061}
+  eagleSpriteRenderer: {fileID: 9203240131136801921}
+  eagleAttackRadius: 10
+  timeBetweenEnemyAttacks: 5
+  attackSpeed: 10
 --- !u!95 &6539631177747029844
 Animator:
   serializedVersion: 5
@@ -140,23 +239,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &3340879180278382926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5335958682789539584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 730a376527f78584ebd0b938af63b1ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eagleTriggerCollider: {fileID: 3163537259209056110}
-  eagleAttackRange: {fileID: 8642767895867124061}
-  eagleAttackRadius: 10
-  timeBetweenEnemyAttacks: 3
-  attackSpeed: 10
 --- !u!1 &8642767895867124061
 GameObject:
   m_ObjectHideFlags: 0

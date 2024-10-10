@@ -384,7 +384,6 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 -analyzer:"F:/UnityEditor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"F:/UnityEditor/2022.3.8f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
-"Assets/EagleBehaviour.cs"
 "Assets/Game Components/Camera/CameraControl.cs"
 "Assets/Game Components/Camera/UI/UIController.cs"
 "Assets/Game Components/MainMenu/MainMenu.cs"
@@ -397,11 +396,12 @@
 "Assets/Game Components/TileSet/CheckPoint/CheckpointController.cs"
 "Assets/Game Components/TileSet/CheckPoint/CheckpointEntityController.cs"
 "Assets/Game Components/TileSet/Collectibles/CollectibleController.cs"
+"Assets/Game Components/TileSet/Grid/MovingPlatformBehaviour.cs"
+"Assets/Game Components/TileSet/Hazards/Enemies/Eagle/EagleBehaviour.cs"
 "Assets/Game Components/TileSet/Hazards/Enemies/Frog/FrogBehaviour.cs"
 "Assets/Game Components/TileSet/Hazards/KillPlaneController.cs"
 "Assets/Game Components/TileSet/LevelEnd/LevelEndBehaviour.cs"
 "Assets/Game Components/TileSet/LevelManager.cs"
-"Assets/MovingPlatformBehaviour.cs"
 -langversion:9.0
 
 /deterministic

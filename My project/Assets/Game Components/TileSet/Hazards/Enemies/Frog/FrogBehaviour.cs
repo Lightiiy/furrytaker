@@ -131,9 +131,6 @@ public class FrogBehaviour : MonoBehaviour
         {
             Instantiate(droppedLoot, transform.position, transform.rotation);
         }
-        else
-        {
-            Debug.Log("uh oh unlucky");
-        }
+
     }
 }

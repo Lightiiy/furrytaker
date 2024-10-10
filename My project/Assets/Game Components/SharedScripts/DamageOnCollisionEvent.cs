@@ -19,7 +19,6 @@ public class DamageOnCollisionEvent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.tag);
         if (other.CompareTag("Player"))
         {
             PlayerHealthController.Instance.DamagePlayer();

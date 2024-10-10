@@ -289,9 +289,9 @@ MonoBehaviour:
     m_Bits: 8
   - serializedVersion: 2
     m_Bits: 2048
-  knockBackLength: 1
+  knockBackLength: 0.5
   knockBackForce: 5
-  impactLength: 1
+  impactLength: 0.5
 --- !u!114 &4641525216215753772
 MonoBehaviour:
   m_ObjectHideFlags: 0
