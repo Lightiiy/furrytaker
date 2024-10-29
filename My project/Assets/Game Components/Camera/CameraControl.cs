@@ -6,26 +6,22 @@ public class PlayerCamera : MonoBehaviour
 {
     public Transform cameraFocusTarget, farBackground, middleBackground;
 
-    public float minHeight, maxHeight;
-
-    private Vector2 lastPosition;
+    public float parallaxSpeed, minHeight, maxHeight;
     
     // Start is called before the first frame update
     void Start()
     {
-        lastPosition = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         transform.position = new Vector3(cameraFocusTarget.position.x, Mathf.Clamp(cameraFocusTarget.position.y, minHeight, maxHeight), transform.position.z);
+
         
+        Vector3 middleBacgrkoundTargetPosition = new Vector3(transform.position.x, transform.position.y, middleBackground.position.z);
 
-        farBackground.position = new Vector3(transform.position.x, farBackground.position.y, farBackground.position.z);
-        middleBackground.position += new Vector3((transform.position.x - lastPosition.x) * 0.5f, (transform.position.y - lastPosition.y) * 0.1f, 0f);
-
-        lastPosition = transform.position;
+        farBackground.position = new Vector3(transform.position.x, transform.position.y, farBackground.position.z);
+        middleBackground.position = Vector3.Lerp(middleBackground.position, middleBacgrkoundTargetPosition, parallaxSpeed * Time.deltaTime);
     }
 }

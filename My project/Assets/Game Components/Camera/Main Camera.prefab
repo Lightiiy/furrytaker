@@ -150,8 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72aaabd30027c554e87bb3ccb07d61dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraFocusTarget: {fileID: 8939331061277541136, guid: 59634ae504d6b7e498cc883e4514c4b0, type: 3}
+  cameraFocusTarget: {fileID: 0}
   farBackground: {fileID: 0}
   middleBackground: {fileID: 0}
-  minHeight: 0
-  maxHeight: 100
+  parallaxSpeed: 0.9
+  minHeight: -10000
+  maxHeight: 10000
