@@ -152,7 +152,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraFocusTarget: {fileID: 0}
   farBackground: {fileID: 0}
-  middleBackground: {fileID: 0}
-  parallaxSpeed: 0.9
-  minHeight: -10000
-  maxHeight: 10000
+  middleBackground:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  paralaxSpeed: 0.5
+  heightOffset: 10
