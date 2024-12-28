@@ -27,5 +27,12 @@ public class DamgeHitBoxController : MonoBehaviour
             Vector2 direction = PlayerController.Instance.playerRigidbody.velocity.normalized;
             PlayerController.Instance.reboundForce(new Vector2(direction.x, direction.y * -1));
         }
+        Debug.Log(other.tag);
+        if (other.CompareTag("BossEnemy"))
+        {
+            BossHealthController bossHealthController = other.gameObject.GetComponent<BossHealthController>();
+            bossHealthController.dealDamageToBoss(1);
+        }
+        //compare tag Bosses logic
     }
 }

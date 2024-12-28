@@ -9,6 +9,8 @@ TagManager:
   - DamageTrigger
   - Platform
   - Switches
+  - Ground
+  - BossEnemy
   layers:
   - Default
   - TransparentFX

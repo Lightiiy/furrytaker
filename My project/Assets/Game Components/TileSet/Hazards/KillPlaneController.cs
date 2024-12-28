@@ -19,10 +19,14 @@ public class KillPlaneController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger event");
         if (other.CompareTag("Player"))
         {
             LevelManager.Instance.RespawnPlayer();
+        }
+
+        if (other.CompareTag("DamageTrigger"))
+        {
+            other.gameObject.SetActive(false);
         }
     }
 }

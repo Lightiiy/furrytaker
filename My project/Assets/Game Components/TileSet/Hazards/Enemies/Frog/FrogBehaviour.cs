@@ -1,7 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -27,8 +24,8 @@ public class FrogBehaviour : MonoBehaviour
     private Rigidbody2D frogRigidbody2D;
     private float timerMovementRest;
     private float timerRayCasts;
-    private Boolean isResting;
-    private Boolean isGrounded;
+    private bool isResting;
+    private bool isGrounded;
 
 
     // Start is called before the first frame update
@@ -43,7 +40,6 @@ public class FrogBehaviour : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         timerRayCasts += Time.deltaTime;
