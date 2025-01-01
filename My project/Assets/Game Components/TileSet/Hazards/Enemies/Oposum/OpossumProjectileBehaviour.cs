@@ -6,6 +6,8 @@ using UnityEngine;
 public class opossumProjectileBehaviour : MonoBehaviour
 {
 
+    public SpriteRenderer projectileSpriteRenderer;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.tag);

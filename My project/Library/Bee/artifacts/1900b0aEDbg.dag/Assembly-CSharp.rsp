@@ -393,6 +393,8 @@
 "Assets/Game Components/SharedScripts/BossHealthController.cs"
 "Assets/Game Components/SharedScripts/DamageOnCollisionEvent.cs"
 "Assets/Game Components/SharedScripts/DestroyAfterTimePeriod.cs"
+"Assets/Game Components/SharedScripts/ForceRebound.cs"
+"Assets/Game Components/SharedScripts/Interfaces/IEnemy.cs"
 "Assets/Game Components/TileSet/AudioManager.cs"
 "Assets/Game Components/TileSet/CheckPoint/CheckpointController.cs"
 "Assets/Game Components/TileSet/CheckPoint/CheckpointEntityController.cs"

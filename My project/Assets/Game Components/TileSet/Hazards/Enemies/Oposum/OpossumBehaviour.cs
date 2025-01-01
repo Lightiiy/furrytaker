@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Game.Enemies;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -10,12 +11,14 @@ enum AttackType
     throwTrashAttack = 2,
 }
 
-public class EnemyPossumBehaviour : MonoBehaviour
+public class EnemyPossumBehaviour : MonoBehaviour, IEnemy
 {
     public float opossumSpeed;
     public float originalAttackPeriod;
-    public int breakTest;
+    public int slowDownAfterTackle;
     public int[] attackTypeRatio = {33, 33, 33, 0};
+    public float testPlayerSearchRange;
+    public float reboundForceStrength = 20;
     public GameObject triggerBoxCollider;
     public GameObject physicsBoxCollider;
     public GameObject spriteRenderer;
@@ -28,12 +31,17 @@ public class EnemyPossumBehaviour : MonoBehaviour
     private Rigidbody2D opossumRigidyBody;
     private BoxCollider2D opossumTrigger;
     private SpriteRenderer opossumSpriteRenderer;
+    private BossHealthController healthController;
+    private ForceRebound forceReboundController;
     
-    void Start()
+    
+    void Awake()
     {
         opossumRigidyBody = GetComponent<Rigidbody2D>();
         opossumTrigger = triggerBoxCollider.GetComponent<BoxCollider2D>();
         opossumSpriteRenderer = spriteRenderer.GetComponent<SpriteRenderer>();
+        healthController = GetComponent<BossHealthController>();
+        forceReboundController = GetComponent<ForceRebound>();
         timerAttackRest = 0f;
         attackPeriod = originalAttackPeriod;
         triggerBoxCollider.SetActive(false);
@@ -46,7 +54,17 @@ public class EnemyPossumBehaviour : MonoBehaviour
         {
             toggleFlippedSprite();
         }
-            
+
+        if (healthController.isInvurnable)
+        {
+            opossumSpriteRenderer.color = new Color(opossumSpriteRenderer.color.r, opossumSpriteRenderer.color.g,
+                opossumSpriteRenderer.color.b, 0.5f  );
+        }
+        else
+        {
+            opossumSpriteRenderer.color = new Color(opossumSpriteRenderer.color.r, opossumSpriteRenderer.color.g,
+                opossumSpriteRenderer.color.b, 1f  );
+        }
         
     }
 
@@ -54,25 +72,24 @@ public class EnemyPossumBehaviour : MonoBehaviour
     {
         timerAttackRest += Time.deltaTime;
         
-        if (timerAttackRest >= attackPeriod)
+        if (timerAttackRest >= attackPeriod && isPlayerInRange())
         {
-            int attackType = 1;
-            // int attackType = Random.Range(0, 4);
+            int attackType = Random.Range(0, 4);
             Debug.Log(attackType);
             switch (attackType)
             {
-                // case (int)AttackType.basicTackleAttack:
-                // {
-                //     StartCoroutine(basicTackleAttack());
-                //     attackPeriod += attackPeriod / 2;
-                //     break;
-                // }
-                // case (int)AttackType.throwTrashAttack:
-                // {
-                //     projectileHolder.throwThreeProjectiles(calculateDirectionOfAttack());
-                //     attackPeriod += attackPeriod / 2;
-                //     break;
-                // }
+                case (int)AttackType.basicTackleAttack:
+                {
+                    StartCoroutine(basicTackleAttack());
+                    attackPeriod += attackPeriod / 2;
+                    break;
+                }
+                case (int)AttackType.throwTrashAttack:
+                {
+                    projectileHolder.throwThreeProjectiles(calculateDirectionOfAttack());
+                    attackPeriod += attackPeriod / 2;
+                    break;
+                }
                 default:
                 {
                     attackPeriod = originalAttackPeriod;
@@ -91,7 +108,6 @@ public class EnemyPossumBehaviour : MonoBehaviour
         float attackTargetLocation = PlayerController.Instance.transform.position.x;
             
         bool reachedPlayerPosition = false;
-        
         opossumRigidyBody.velocity = calculateDirectionOfAttack().normalized * opossumSpeed;
         
         while (!reachedPlayerPosition)
@@ -100,20 +116,14 @@ public class EnemyPossumBehaviour : MonoBehaviour
             yield return null;
         }
 
-        opossumRigidyBody.drag = breakTest;
+        opossumRigidyBody.drag = slowDownAfterTackle;
         yield return new WaitUntil(() => Mathf.Abs(opossumRigidyBody.velocity.x) < 0.1f);
         opossumRigidyBody.drag = 0f;
         triggerBoxCollider.SetActive(false);
         //play the slow down animation
         //check if running into a wall/pit
     }
-
-    // private int decideAttackType()
-    // {
-    //     int chancePull = Random.Range(0, 100);
-    //     
-    // }
-
+    
     private Vector2 calculateDirectionOfAttack()
     {
         return new Vector2(PlayerController.Instance.transform.position.x - transform.position.x, transform.position.y);
@@ -125,4 +135,33 @@ public class EnemyPossumBehaviour : MonoBehaviour
         opossumTrigger.offset = new Vector2(opossumTrigger.offset.x * -1, opossumTrigger.offset.y);
     }
 
+    private bool isPlayerInRange()
+    { 
+        bool testValue =Physics2D.OverlapCircle(transform.position, testPlayerSearchRange, LayerMask.NameToLayer("Player"));
+        Debug.Log(testValue);
+        return testValue;
+    }
+
+    public void DealDamage(int damage)
+    {
+        healthController.dealDamageToBoss(damage);
+        attackPeriod = originalAttackPeriod;
+    }
+
+    public IEnumerator HandleCollisionRebound(Vector2 collisionDirection)
+    {
+        float originalGravity = opossumRigidyBody.gravityScale;
+        opossumRigidyBody.gravityScale = originalGravity * 5;
+        forceReboundController.ApplyReboundForce(opossumRigidyBody, collisionDirection, opossumSpeed);
+        
+        yield return new WaitUntil(() =>
+        {
+            bool opossumForceReboundApplied = opossumRigidyBody.velocity.magnitude <= 0.1f;
+            return opossumForceReboundApplied;
+        });
+
+        opossumRigidyBody.gravityScale = originalGravity;
+    }
+    
+    
 }

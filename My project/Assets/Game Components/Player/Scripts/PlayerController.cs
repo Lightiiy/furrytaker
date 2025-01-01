@@ -132,6 +132,7 @@ public class PlayerController : MonoBehaviour
 
     public void reboundForce(Vector2 direction)
     {
-        playerRigidbody.velocity = new Vector2(direction.x * reboundForceStrength, direction.y * reboundForceStrength);
+        
+        playerRigidbody.velocity = new Vector2(playerRigidbody.velocity.x + direction.x * reboundForceStrength, direction.y * reboundForceStrength);
     }
 }

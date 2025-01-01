@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class opossumProjectileHandler : MonoBehaviour
 {
     public GameObject[] oposssumProjectileArray;
     public float projectileSpeed;
+    public Sprite[] projectileSpriteArray;
 
     public void Start()
     {
@@ -33,6 +35,9 @@ public class opossumProjectileHandler : MonoBehaviour
     {
         foreach (var projectile in oposssumProjectileArray)
         {
+            SpriteRenderer projectileSprite = projectile.GetComponent<SpriteRenderer>();
+            int projectileSpriteIndex = Random.Range(0, projectileSpriteArray.Length);
+            projectileSprite.sprite = projectileSpriteArray[projectileSpriteIndex];
             projectile.transform.position = transform.position;
             projectile.SetActive(true);
         }
