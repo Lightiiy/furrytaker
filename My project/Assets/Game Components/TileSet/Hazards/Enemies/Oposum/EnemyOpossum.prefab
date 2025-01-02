@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 8159362565601533914}
   - component: {fileID: 7573210259002840803}
   - component: {fileID: 8867416643735493282}
-  - component: {fileID: 6426274723640688612}
   m_Layer: 8
   m_Name: EnemyOpossum
   m_TagString: BossEnemy
@@ -414,27 +413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cc749fd6445e594f997b9ffbebede89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &6426274723640688612
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7449218838067461873}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c3cd6c798d5e77d409132f3bae7ac65a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7604505613442427404
 GameObject:
   m_ObjectHideFlags: 0

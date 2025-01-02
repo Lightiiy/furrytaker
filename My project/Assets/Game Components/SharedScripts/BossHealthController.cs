@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BossHealthController : MonoBehaviour
 {
+    [SerializeField] private GameObject[] healthBarUI;
+    
+    
     public int bossHealthMax;
     public float damageVurnabilityPeriod = 5;
     public int bossHealthCurrent;
@@ -20,18 +24,13 @@ public class BossHealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        isInvurnable = invurnabilityCounter < 0 ? false : true;
+        
         if (isInvurnable)
         {
             invurnabilityCounter -= Time.deltaTime;
+        }
 
-            isInvurnable = invurnabilityCounter < 0 ? false : true;
-        }
-        
-        
-        if (bossHealthCurrent <= 0)
-        {
-            killBoss();
-        }
     }
 
     public void dealDamageToBoss(int damage)
@@ -41,6 +40,13 @@ public class BossHealthController : MonoBehaviour
             bossHealthCurrent -= damage;
             isInvurnable = true;
             invurnabilityCounter = damageVurnabilityPeriod;
+            GameObject heartIcon = healthBarUI[bossHealthCurrent];
+            heartIcon.SetActive(false);
+            if (bossHealthCurrent <= 0)
+            {
+                killBoss();
+            }
+            
         }
     }
 
@@ -48,5 +54,6 @@ public class BossHealthController : MonoBehaviour
     {
         //create death effect via animator
         gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }
