@@ -9,7 +9,7 @@ used for basic concept desgin of UI/UX
 and also as a whtiteboard of ideas? 
 ### WhiteBoard
 https://www.figma.com/file/nBTOTxyWsijNsGwK9K0LTz/WhiteBoard---game?type=whiteboard&node-id=0%3A1&t=5Ml2IuBNiHBFE3VN-1
-### design of UI/UX 
+### design of UI/UX and gameplay
 https://www.figma.com/file/ZVBefynTR8axEE798uBhNe/Untitled?type=design&node-id=0%3A1&mode=design&t=kwIP7FR2QHXIgmCS-1
 
 ## Git WorkFlow
