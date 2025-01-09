@@ -94,7 +94,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3035508058272311690}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -543,8 +543,8 @@ RectTransform:
   - {fileID: 6678315794897562462}
   - {fileID: 4268142916998672732}
   - {fileID: 2766242605362705789}
-  - {fileID: 3378021619130409634}
   - {fileID: 8421336575587330661}
+  - {fileID: 3378021619130409634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -635,6 +635,8 @@ MonoBehaviour:
   GemCounter: {fileID: 592199537374357608}
   PauseScreen: {fileID: 3035508058272311690}
   fadeOutScreen: {fileID: 9150190871688560550}
+  fadeIn: 0
+  fadeOut: 0
   isPaused: 0
   fadeSpeed: 3
   optionsMenu: MainMenu
@@ -1016,15 +1018,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2429156571135375732, guid: 651f4bbee96f54a4bb982f0054656da9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2429156571135375732, guid: 651f4bbee96f54a4bb982f0054656da9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2429156571135375732, guid: 651f4bbee96f54a4bb982f0054656da9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2429156571135375732, guid: 651f4bbee96f54a4bb982f0054656da9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1066,13 +1068,17 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3140279866628500663, guid: 651f4bbee96f54a4bb982f0054656da9, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3507733828484410675, guid: 651f4bbee96f54a4bb982f0054656da9, type: 3}
       propertyPath: m_Name
       value: FadeOutScreen
       objectReference: {fileID: 0}
     - target: {fileID: 3507733828484410675, guid: 651f4bbee96f54a4bb982f0054656da9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

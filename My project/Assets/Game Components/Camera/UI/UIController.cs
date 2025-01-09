@@ -17,7 +17,7 @@ public class UIController : MonoBehaviour
     public GameObject GemCounter;
     public GameObject PauseScreen;
     public Image fadeOutScreen;
-    private bool fadeIn, fadeOut;
+    public bool fadeIn, fadeOut;
     public bool isPaused = false;
     public float fadeSpeed;
     
