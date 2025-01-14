@@ -1,12 +1,11 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadNextSceneTrigger : MonoBehaviour
 {
     public string nextSceneTitle;
+    public GameObject SpawnPlayerInLoadingZone;
     
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -26,5 +25,6 @@ public class LoadNextSceneTrigger : MonoBehaviour
         }
         
         SceneManager.LoadScene(nextSceneTitle);
+        PlayerController.Instance.transform.position = SpawnPlayerInLoadingZone.transform.position;
     }
 }

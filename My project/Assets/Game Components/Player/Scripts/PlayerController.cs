@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+        
         //create a coroutine for knockback
         if (knockBackCounter >= 0 || impactCounter >= 0)
         {
