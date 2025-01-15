@@ -401,6 +401,7 @@
 "Assets/Game Components/TileSet/Collectibles/CollectibleController.cs"
 "Assets/Game Components/TileSet/Grid/BouncePad/BouncePad.cs"
 "Assets/Game Components/TileSet/Grid/Platforms/MovingPlatformBehaviour.cs"
+"Assets/Game Components/TileSet/Grid/Switch/SwitchBehaviour.cs"
 "Assets/Game Components/TileSet/Hazards/Enemies/Eagle/EagleBehaviour.cs"
 "Assets/Game Components/TileSet/Hazards/Enemies/Frog/FrogBehaviour.cs"
 "Assets/Game Components/TileSet/Hazards/Enemies/Oposum/Scripts/OpossumBehaviour.cs"
@@ -410,7 +411,6 @@
 "Assets/Game Components/TileSet/LevelLoadingManagement/LevelEndBehaviour.cs"
 "Assets/Game Components/TileSet/LevelLoadingManagement/LoadNextLevel/LoadNextSceneTrigger.cs"
 "Assets/Game Components/TileSet/LevelManager.cs"
-"Assets/Game Components/TileSet/Switch/SwitchBehaviour.cs"
 -langversion:9.0
 
 /deterministic

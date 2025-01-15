@@ -11,6 +11,7 @@ public class LoadNextSceneTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.gameObject.SetActive(false);
             StartCoroutine(loadInToNextScene());
         }
     }

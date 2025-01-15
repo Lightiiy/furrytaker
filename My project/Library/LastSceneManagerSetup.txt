@@ -20,6 +20,14 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Game Components/Scenes/GameScenes/FirstPlatformScene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/FirstFrogScene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/FirstSwitchScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

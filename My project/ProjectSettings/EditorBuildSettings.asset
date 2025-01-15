@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game Components/Scenes/GameScenes/FirstPlatformScene.unity
     guid: cd7906d0cab5f6b4f825b6dbf1a410c7
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/FirstFrogScene.unity
+    guid: d160e6c26538ff94894e36ed8478add6
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/FirstSwitchScene.unity
+    guid: 1689087607dca2f48ac8b3e52384dc7f
   m_configObjects: {}
