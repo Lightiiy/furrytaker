@@ -28,6 +28,10 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Game Components/Scenes/GameScenes/FirstSwitchScene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/SaveCrossRoadScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
