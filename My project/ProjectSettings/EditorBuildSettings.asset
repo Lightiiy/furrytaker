@@ -9,21 +9,30 @@ EditorBuildSettings:
     path: Assets/Game Components/Scenes/MainMenu.unity
     guid: 25f5fd1910e67aa4c92680592a57ee65
   - enabled: 1
-    path: Assets/Game Components/Scenes/GameScenes/DefaultSaveArea.unity
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/DefaultSaveArea.unity
     guid: 098536617736c0d4f834164f7a6dffb7
   - enabled: 1
-    path: Assets/Game Components/Scenes/GameScenes/FirstJumpScene.unity
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstJumpScene.unity
     guid: 8093681c974a9784da46e25ad4eb74a8
   - enabled: 1
-    path: Assets/Game Components/Scenes/GameScenes/FirstWalkScene.unity
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstWalkScene.unity
     guid: 120cdffc0b1e497408e96f5c22f4a1dd
   - enabled: 1
-    path: Assets/Game Components/Scenes/GameScenes/FirstPlatformScene.unity
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstPlatformScene.unity
     guid: cd7906d0cab5f6b4f825b6dbf1a410c7
   - enabled: 1
-    path: Assets/Game Components/Scenes/GameScenes/FirstFrogScene.unity
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstFrogScene.unity
     guid: d160e6c26538ff94894e36ed8478add6
   - enabled: 1
-    path: Assets/Game Components/Scenes/GameScenes/FirstSwitchScene.unity
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstSwitchScene.unity
     guid: 1689087607dca2f48ac8b3e52384dc7f
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/SaveCrossRoadScene.unity
+    guid: de809c783469bc64c8497f5836a9d2e2
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/TutorialForest/TheBigFallScene.unity
+    guid: afdcd28340979dd4ba2d3fdff0a19f94
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector1.unity
+    guid: 65a93618e03a39e4c8c07be6c9848ab0
   m_configObjects: {}

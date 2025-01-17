@@ -7,31 +7,39 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/GameScenes/DefaultSaveArea.unity
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/DefaultSaveArea.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/GameScenes/FirstWalkScene.unity
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstWalkScene.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/GameScenes/FirstJumpScene.unity
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstJumpScene.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/GameScenes/FirstPlatformScene.unity
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstPlatformScene.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/GameScenes/FirstFrogScene.unity
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstFrogScene.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/GameScenes/FirstSwitchScene.unity
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/FirstSwitchScene.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/GameScenes/SaveCrossRoadScene.unity
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/SaveCrossRoadScene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/TutorialForest/TheBigFallScene.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector1.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
