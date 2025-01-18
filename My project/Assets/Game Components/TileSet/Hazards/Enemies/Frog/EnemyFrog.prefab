@@ -144,9 +144,9 @@ MonoBehaviour:
   frogRestTime: 3
   frogCheckPathTime: 1
   checkDistance: 2
-  groundLayer:
+  groundLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 2056
   triggerBoxCollider: {fileID: 722679471273251429}
   physicsBoxCollider: {fileID: 7724806333731221088}
   spriteRenderer: {fileID: 7113386012691705879}

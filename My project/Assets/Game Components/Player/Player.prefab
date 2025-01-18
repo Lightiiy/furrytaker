@@ -285,10 +285,8 @@ MonoBehaviour:
   jumpFlag: 1
   groundCheckPoint: {fileID: 5819755574800566173}
   groundLayers:
-  - serializedVersion: 2
-    m_Bits: 8
-  - serializedVersion: 2
-    m_Bits: 2048
+    serializedVersion: 2
+    m_Bits: 2056
   knockBackLength: 0.5
   knockBackForce: 5
   impactLength: 0.5

@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     
     public bool jumpFlag = true;
     public Transform groundCheckPoint;
-    public LayerMask[] groundLayers;
+    public LayerMask groundLayers;
 
     private Animator playerAnimator;
     private SpriteRenderer playerSpriteRenderer;
@@ -69,15 +69,8 @@ public class PlayerController : MonoBehaviour
     Vector2 BasePlayerMovement()
     {
         Vector2 movementVector = playerRigidbody.velocity;
-
-        LayerMask layersOfGroundBehaviour = 0;
-
-        foreach (LayerMask layer in groundLayers)
-        {
-            layersOfGroundBehaviour |= layer;
-        }
          
-        jumpFlag = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, layersOfGroundBehaviour);
+        jumpFlag = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, groundLayers);
 
         //user presses jump -> move player up
         if(Input.GetButtonDown("Jump") && jumpFlag)

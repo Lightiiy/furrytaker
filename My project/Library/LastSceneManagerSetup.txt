@@ -40,6 +40,14 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector1.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector2.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector3.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

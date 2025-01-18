@@ -8,7 +8,7 @@ public class FrogBehaviour : MonoBehaviour
     public float frogRestTime;
     public float frogCheckPathTime;
     public float checkDistance;
-    public LayerMask groundLayer;
+    public LayerMask groundLayers;
     public GameObject triggerBoxCollider;
     public GameObject physicsBoxCollider;
     public GameObject spriteRenderer;
@@ -22,6 +22,7 @@ public class FrogBehaviour : MonoBehaviour
     private SpriteRenderer frogSpriteRenderer;
     private Animator frogAnimator;
     private Rigidbody2D frogRigidbody2D;
+    private LayerMask layersOfGroundBehaviour;
     private float timerMovementRest;
     private float timerRayCasts;
     private bool isResting;
@@ -43,7 +44,7 @@ public class FrogBehaviour : MonoBehaviour
     void Update()
     {
         timerRayCasts += Time.deltaTime;
-        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, groundLayers);
         if (frogSpriteRenderer.flipX)
         {
             frogTriggerBox2D.offset = new Vector2(0.1f, frogTriggerBox2D.offset.y);
@@ -90,8 +91,8 @@ public class FrogBehaviour : MonoBehaviour
         Vector2 originVertical = frogSpriteRenderer.flipX ? bottomRight : bottomLeft;
         Vector2 directionVertical = new Vector2(0f, -1f);
 
-        horizontalRaycast = Physics2D.Raycast(originHorizontal, directionHorizontal, checkDistance, groundLayer);
-        verticalRaycast = Physics2D.Raycast(originVertical, directionVertical, checkDistance, groundLayer);
+        horizontalRaycast = Physics2D.Raycast(originHorizontal, directionHorizontal, checkDistance, groundLayers);
+        verticalRaycast = Physics2D.Raycast(originVertical, directionVertical, checkDistance, groundLayers);
         
         if (horizontalRaycast.collider != null || verticalRaycast.collider == null)
         {
