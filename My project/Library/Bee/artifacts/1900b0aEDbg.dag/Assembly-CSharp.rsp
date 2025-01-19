@@ -390,6 +390,7 @@
 "Assets/Game Components/Player/Scripts/DamgeHitBoxController.cs"
 "Assets/Game Components/Player/Scripts/PlayerController.cs"
 "Assets/Game Components/Player/Scripts/PlayerHealthController.cs"
+"Assets/Game Components/Player/Scripts/SceneLoadingZoneData.cs"
 "Assets/Game Components/SharedScripts/BossHealthController.cs"
 "Assets/Game Components/SharedScripts/DamageOnCollisionEvent.cs"
 "Assets/Game Components/SharedScripts/DestroyAfterTimePeriod.cs"

@@ -96,7 +96,10 @@ public class UIController : MonoBehaviour
 
     public void UpdateGemCounter()
     {
-        GemCounter.GetComponentInChildren<TMP_Text>().text = LevelManager.Instance.PlayerScore.ToString();
+        if (LevelManager.Instance != null)
+        {
+            GemCounter.GetComponentInChildren<TMP_Text>().text = LevelManager.Instance.PlayerScore.ToString();
+        }
     }
 
     public void togglePause()

@@ -34,6 +34,12 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        if (LevelManager.Instance != null)
+        {
+            transform.position = LevelManager.Instance.playerEntryPosition;
+            
+        }
+
     }
 
     // Update is called once per frame

@@ -107,4 +107,5 @@ public class PlayerCamera : MonoBehaviour
         segment.position = new Vector3(minX - segmentWidth, segment.position.y, segment.position.z);
 
     }
+
 }

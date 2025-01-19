@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5045865897916485771}
   - component: {fileID: 2557442733569350539}
   - component: {fileID: 1303014910333728314}
-  - component: {fileID: 1021776139545170929}
   m_Layer: 0
   m_Name: LoadNextscene
   m_TagString: Untagged
@@ -47,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c9c6c17b380a47998eda0f8dcc09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneTitle: 
+  nextSceneTitle: FirstWalkScene
+  indexOfEntryPoint: 1
 --- !u!212 &2557442733569350539
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -145,16 +145,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5135393, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1021776139545170929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696647103348111431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c7c9c6c17b380a47998eda0f8dcc09d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneTitle: TileSetTutorial

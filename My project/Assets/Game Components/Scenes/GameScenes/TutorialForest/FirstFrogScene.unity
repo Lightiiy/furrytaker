@@ -66510,6 +66510,10 @@ PrefabInstance:
       propertyPath: nextSceneTitle
       value: FirstPlatformScene
       objectReference: {fileID: 0}
+    - target: {fileID: 5045865897916485771, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
+      propertyPath: indexOfEntryPoint
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

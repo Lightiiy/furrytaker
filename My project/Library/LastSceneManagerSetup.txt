@@ -3,10 +3,6 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Game Components/Scenes/TileSetTutorial.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
 - path: Assets/Game Components/Scenes/GameScenes/TutorialForest/DefaultSaveArea.unity
   isLoaded: 0
   isActive: 0
@@ -32,8 +28,8 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Game Components/Scenes/GameScenes/TutorialForest/SaveCrossRoadScene.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0
 - path: Assets/Game Components/Scenes/GameScenes/TutorialForest/TheBigFallScene.unity
   isLoaded: 0
@@ -52,6 +48,18 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector4.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSave.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleBoss.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Game Components/Scenes/TileSetTutorial.unity
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0

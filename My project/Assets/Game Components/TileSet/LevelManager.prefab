@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnTimer: 2
+  sceneLoadingZoneDataList: {fileID: 11400000, guid: fa19adc548a504d4a9869ff70e2ffb98, type: 2}
+  playerEntryPosition: {x: 0, y: 0}
+  PlayerScore: 0

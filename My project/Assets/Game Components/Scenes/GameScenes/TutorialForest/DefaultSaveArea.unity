@@ -477,6 +477,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7333400255399493154, guid: 5f64da2377f7e974d88c346e7bde6ac3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8947326056596990415, guid: 5f64da2377f7e974d88c346e7bde6ac3, type: 3}
       propertyPath: m_Name
       value: UICanvas
@@ -750,6 +754,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8875404998387978163, guid: b5f348449cb650042b91240335dacf6e, type: 3}
+      propertyPath: sceneLoadingZoneDataList
+      value: 
+      objectReference: {fileID: 11400000, guid: fa19adc548a504d4a9869ff70e2ffb98, type: 2}
     - target: {fileID: 1288511005917206740, guid: b5f348449cb650042b91240335dacf6e, type: 3}
       propertyPath: m_Name
       value: LevelManager
@@ -1180,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 54399304555888547, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.02
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 54399304555888547, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1217,10 +1225,6 @@ PrefabInstance:
     - target: {fileID: 696647103348111431, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
       propertyPath: m_Name
       value: LoadNextScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 1021776139545170929, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
-      propertyPath: nextSceneTitle
-      value: FirstWalkScene
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
