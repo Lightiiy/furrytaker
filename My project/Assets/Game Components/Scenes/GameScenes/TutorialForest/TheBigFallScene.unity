@@ -280,7 +280,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1975476171285634207, guid: 1466d41a66b2c594e88fee9f51b204b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.38
+      value: 61.48
       objectReference: {fileID: 0}
     - target: {fileID: 1975476171285634207, guid: 1466d41a66b2c594e88fee9f51b204b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2137,7 +2137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7333400255399493154, guid: 5f64da2377f7e974d88c346e7bde6ac3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8947326056596990415, guid: 5f64da2377f7e974d88c346e7bde6ac3, type: 3}
       propertyPath: m_Name
@@ -4579,6 +4579,10 @@ PrefabInstance:
     - target: {fileID: 5045865897916485771, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
       propertyPath: nextSceneTitle
       value: SaveCrossRoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045865897916485771, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
+      propertyPath: indexOfEntryPoint
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

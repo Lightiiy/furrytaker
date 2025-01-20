@@ -396,6 +396,8 @@
 "Assets/Game Components/SharedScripts/DestroyAfterTimePeriod.cs"
 "Assets/Game Components/SharedScripts/ForceRebound.cs"
 "Assets/Game Components/SharedScripts/Interfaces/IEnemy.cs"
+"Assets/Game Components/SharedScripts/SaveData.cs"
+"Assets/Game Components/SharedScripts/SaveSystem.cs"
 "Assets/Game Components/TileSet/AudioManager.cs"
 "Assets/Game Components/TileSet/CheckPoint/CheckpointController.cs"
 "Assets/Game Components/TileSet/CheckPoint/CheckpointEntityController.cs"
@@ -409,8 +411,8 @@
 "Assets/Game Components/TileSet/Hazards/Enemies/Oposum/Scripts/OpossumProjectileBehaviour.cs"
 "Assets/Game Components/TileSet/Hazards/Enemies/Oposum/Scripts/OpossumProjectileHandler.cs"
 "Assets/Game Components/TileSet/Hazards/KillPlaneController.cs"
-"Assets/Game Components/TileSet/LevelLoadingManagement/LevelEndBehaviour.cs"
 "Assets/Game Components/TileSet/LevelLoadingManagement/LoadNextLevel/LoadNextSceneTrigger.cs"
+"Assets/Game Components/TileSet/LevelLoadingManagement/SaveFirePit/BonfireSaveProp.cs"
 "Assets/Game Components/TileSet/LevelManager.cs"
 -langversion:9.0
 

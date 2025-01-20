@@ -218,11 +218,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1975476171285634207, guid: 1466d41a66b2c594e88fee9f51b204b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 224.3
+      value: 162.22
       objectReference: {fileID: 0}
     - target: {fileID: 1975476171285634207, guid: 1466d41a66b2c594e88fee9f51b204b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.2
+      value: -11.86
       objectReference: {fileID: 0}
     - target: {fileID: 1975476171285634207, guid: 1466d41a66b2c594e88fee9f51b204b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -675,7 +675,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5045865897916485771, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
       propertyPath: nextSceneTitle
-      value: UndergroundTempleSector3
+      value: UndergroundTempleSave
+      objectReference: {fileID: 0}
+    - target: {fileID: 5045865897916485771, guid: 3b4f12822bc1a2745acd4e517a5302d5, type: 3}
+      propertyPath: indexOfEntryPoint
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

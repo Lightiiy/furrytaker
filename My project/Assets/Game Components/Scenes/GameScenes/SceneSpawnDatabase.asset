@@ -40,3 +40,32 @@ MonoBehaviour:
     entryPoints:
     - {x: 72, y: -26}
     - {x: 21, y: -13}
+  - sceneName: TheBigFallScene
+    entryPoints:
+    - {x: 30, y: -58}
+    - {x: 61.5, y: 37}
+  - sceneName: UndergroundTempleSector1
+    entryPoints:
+    - {x: -86, y: 10}
+    - {x: 168, y: 4}
+  - sceneName: UndergroundTempleSector2
+    entryPoints:
+    - {x: -94.5, y: 9}
+    - {x: 170, y: 4}
+  - sceneName: UndergroundTempleSector3
+    entryPoints:
+    - {x: -152, y: 2}
+    - {x: 208, y: -1}
+  - sceneName: UndergroundTempleSector4
+    entryPoints:
+    - {x: -18.5, y: 1}
+    - {x: 153, y: 34}
+    - {x: 210, y: 6}
+  - sceneName: UndergroundTempleSave
+    entryPoints:
+    - {x: 179, y: 1}
+    - {x: 212, y: 1}
+  - sceneName: UndergroundTempleBoss
+    entryPoints:
+    - {x: 162, y: -12}
+    - {x: 229, y: -9}

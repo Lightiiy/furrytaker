@@ -34,10 +34,10 @@ public class PlayerController : MonoBehaviour
     {
         playerAnimator = GetComponent<Animator>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
-        if (LevelManager.Instance != null)
+        if (LevelManager.Instance != null && LevelManager.Instance.loadingZoneTriggered)
         {
             transform.position = LevelManager.Instance.playerEntryPosition;
-            
+            LevelManager.Instance.loadingZoneTriggered = false;
         }
 
     }

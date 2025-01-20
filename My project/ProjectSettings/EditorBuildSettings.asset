@@ -35,4 +35,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector1.unity
     guid: 65a93618e03a39e4c8c07be6c9848ab0
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector2.unity
+    guid: 35922b8920533284b9ad552544f16bfc
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector3.unity
+    guid: a69b29d8c30aee347b812359fe5528c6
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSector4.unity
+    guid: 77e2a0e54f6a4ab40b95f4b04b473328
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleSave.unity
+    guid: 19bbf0f7713f41549ae19dda0575c3fe
+  - enabled: 1
+    path: Assets/Game Components/Scenes/GameScenes/UndergroundZone/UndergroundTempleBoss.unity
+    guid: b5f7b3f2ece82ab4da62a66871eda926
   m_configObjects: {}

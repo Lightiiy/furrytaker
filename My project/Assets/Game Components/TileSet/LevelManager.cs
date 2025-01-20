@@ -16,6 +16,8 @@ public class LevelManager : MonoBehaviour
 
     public float respawnTimer;
 
+    public bool loadingZoneTriggered = false;
+
     public SceneLoadingZoneDatabase sceneLoadingZoneDataList;
     
     private Dictionary<string, Vector2[]> sceneSpawnDataDictionary;
@@ -83,12 +85,6 @@ public class LevelManager : MonoBehaviour
         PlayerHealthController.Instance.currentHealth = PlayerHealthController.Instance.maxHealth;
         UIController.Instance.UpdateHealthDisplay();
     }
-
-
-    public void LevelEnd()
-    {
-        Debug.Log("im ending");
-    }
     
     public Vector2 GetEntryPoint(string sceneName, int entryIndex)
     {
@@ -115,5 +111,6 @@ public class LevelManager : MonoBehaviour
     public void SetPlayerEntryPosition(string sceneName, int entryIndex)
     {
         playerEntryPosition = GetEntryPoint(sceneName,entryIndex);
+        loadingZoneTriggered = true;
     }
 }
