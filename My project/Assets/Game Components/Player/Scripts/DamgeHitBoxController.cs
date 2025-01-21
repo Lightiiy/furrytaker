@@ -8,17 +8,7 @@ using UnityEngine;
 public class DamgeHitBoxController : MonoBehaviour
 {
     public GameObject deathEffect;    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemies"))
@@ -41,20 +31,6 @@ public class DamgeHitBoxController : MonoBehaviour
                 bossEnemy.DealDamage(1);
                 StartCoroutine(bossEnemy.HandleCollisionRebound(new Vector2(bossReboundDirection, direction.y * -1)));
             }
-
-            // BossHealthController bossHealthController = other.gameObject.GetComponent<BossHealthController>();
-            // bossHealthController.dealDamageToBoss(1);
-            // Vector2 directionPlayer = PlayerController.Instance.playerRigidbody.velocity.normalized;
-            // Vector2 playerReboundForce = new Vector2(directionPlayer.x * -1, directionPlayer.y * -1);
-            //
-            // Rigidbody2D bossRigidbody2D = other.gameObject.GetComponent<Rigidbody2D>();
-            //
-            // Vector2 directionBoss = bossRigidbody2D.velocity.normalized;
-            // Vector2 bossReboundForce = new Vector2(directionBoss.x * -1, directionBoss.y * -1);
-            //
-            // PlayerController.Instance.reboundForce(playerReboundForce);
-            //
         }
-        //compare tag Bosses logic
     }
 }
